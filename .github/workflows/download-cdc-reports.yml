@@ -31,7 +31,7 @@ jobs:
 
       - name: Download CDC reports
         run: |
-          python src/download_cdc_reports.py
+          python src/download_tw_cdc_reports.py
           
       - uses: EndBug/add-and-commit@v7
         with:
