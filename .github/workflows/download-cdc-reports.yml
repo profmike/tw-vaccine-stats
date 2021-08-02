@@ -1,17 +1,15 @@
 name: Download TW CDC reports
 
 on:
-  # Run the workflow hourly
-  schedule:
-    - cron: '5 * * * *'
   workflow_dispatch:
+  schedule:
+    - cron: '9,19,29,39,49,59 * * * *'
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
       - name: Set up Python 3.9
         uses: actions/setup-python@v2
@@ -29,7 +27,7 @@ jobs:
           pip install requests
           pip install beautifulsoup4
 
-      - name: Download CDC reports
+      - name: Download TW CDC reports
         run: |
           python src/download_tw_cdc_reports.py
           
