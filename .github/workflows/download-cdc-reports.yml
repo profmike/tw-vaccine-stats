@@ -2,7 +2,7 @@ name: Download TW CDC reports
 
 on:
   schedule:
-    - cron: '9/10 * * * *'
+    - cron: '9/20 * * * *'
   workflow_dispatch:
 
 jobs:
