@@ -31,10 +31,16 @@ jobs:
         run: |
           python src/download_tw_cdc_reports.py
           
+      - name: Get current time in TW
+        run: echo "TIMESTAMP=$(TZ=':Asia/Taipei' date +'%Y/%m/%d %H:%M')" >> $GITHUB_ENV
+        
+      - name: Echo current time
+        run: echo $TIMESTAMP
+        
       - uses: EndBug/add-and-commit@v7
         with:
           default_author: github_actions
-          message: 'Add new CDC reports'
+          message: 'latest TW CDC reports ($TIMESTAMP)'
           add: '*.pdf'
 
 
