@@ -54,6 +54,7 @@ def download_cdc_reports():
             viewer_url = CDC_BASE_URL + link['href']
             print("fetching viewer html:", viewer_url)
             viewer_page = requests.get(viewer_url)
+            viewer_page.encoding = viewer_page.apparent_encoding
             if SAVE_VIEWER_HTML:
                 print(viewer_page.content)
                 with open(file_path+".html", 'wb') as f:
