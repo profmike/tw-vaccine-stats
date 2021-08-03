@@ -4,7 +4,7 @@ We are working on making TW CDC's vaccination data accessible, as it is only pub
  
 ## Daily stats by vaccine type in [`data`](data)
 
-Daily and cumulative stats for each type of vaccine, including the breakdown of 1st vs 2nd shots. 
+Daily and cumulative stats for each type of vaccine, including stats for each vaccine's 1st vs. 2nd shots. 
 
 We use the common vaccines names used by Taiwanese in the data headers:
 * AZ: Oxford/AstraZeneca
@@ -15,6 +15,12 @@ We use the common vaccines names used by Taiwanese in the data headers:
 
 Source: automatically extracted from the [daily PDF reports](https://www.cdc.gov.tw/Category/Page/9jFXNbCe-sFK9EImRRi2Og) published by Taiwan CDC.
 
+## Other open data resources
+* 國家高速網路與計算中心 (NCHC) provides many [charts on vaccination](https://covid-19.nchc.org.tw/dt_002-csse_covid_19_daily_reports_vaccine_city2.php) and 2 APIs:
+  * [Daily stats on total vaccination by city](https://covid-19.nchc.org.tw/api.php?tableID=2003) without data on vaccine type.
+  * [Weekly stats on total vaccination and inventory by city](https://covid-19.nchc.org.tw/api.php?tableID=2001) without data on 1st vs. 2nd shots.
+* 天下雜誌 provides [daily stats on total vaccination by vaccine type](https://github.com/cwgrouptw/data), without data on each vaccine's 1st vs. 2nd shots. 
+
 
 ## Archive of Taiwan CDC's vaccination reports in [`data/pdf`](data/pdf): 
 
@@ -22,8 +28,7 @@ Thanks to g0v contributors, we have reports going back to March. If you have cop
 
 Source: [Daily, weekly, and adverse event reports](https://www.cdc.gov.tw/Category/Page/9jFXNbCe-sFK9EImRRi2Og) published by Taiwan CDC. 
 
-## Other open data resources
-* [Daily/weekly stats by city](https://covid-19.nchc.org.tw/dt_002-csse_covid_19_daily_reports_vaccine_city2.php) provided by NCHC. However, daily stats by vaccine type and breakdown between 1st and 2nd shots are not available.
+
 
 ## Discuss
 
