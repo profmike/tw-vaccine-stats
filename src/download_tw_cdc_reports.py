@@ -54,23 +54,29 @@ def download_cdc_reports():
             viewer_url = CDC_BASE_URL + link['href']
             print("fetching viewer html:", viewer_url)
             viewer_page = requests.get(viewer_url)
-            print("headers:", viewer_page.headers)
+            print("content-type:", viewer_page.headers['Content-Type'])
             print("encoding:", viewer_page.encoding)
-            print("apparent encoding:", viewer_page.apparent_encoding)
-            #viewer_page.encoding = viewer_page.apparent_encoding
-            print(viewer_page.content)
-            if SAVE_VIEWER_HTML:
-                print(viewer_page.content)
-                with open(file_path+".html", 'wb') as f:
+            print("headers:", viewer_page.headers)
+            #print(viewer_page.content)
+
+            # check content-type, because PDF files appear to initially be returned as PDF, then later get wrapped in HTML viewer
+            if viewer_page.headers['Content-Type'] == 'application/pdf':
+                print("no html viewer, saving PDF to:", file_path)
+                with open(file_path, 'wb') as f:
                     f.write(viewer_page.content)
+            else:
+                # parse the HTML of PDF viewer
+                pdf_link: ResultSet[Tag] = BeautifulSoup(
+                    viewer_page.content,  "html.parser", from_encoding="utf-8").select("a.nav-link")[0]
+                pdf_url = CDC_BASE_URL + pdf_link['href']
+                print("fetching pdf:", pdf_url)
+                print("saving file to:", file_path)
+                with open(file_path, 'wb') as f:
+                    f.write(requests.get(pdf_url).content)
 
-            pdf_link: ResultSet[Tag] = BeautifulSoup(
-                viewer_page.content,  "html.parser", from_encoding="utf-8").select("a.nav-link")[0]
-            pdf_url = CDC_BASE_URL + pdf_link['href']
-            print("fetching pdf:", pdf_url)
-            print("saving file to:", file_path)
-            with open(file_path, 'wb') as f:
-                f.write(requests.get(pdf_url).content)
 
+def main():
+    download_cdc_reports()
 
-download_cdc_reports()
+if __name__ == "__main__":
+    main()
