@@ -8,7 +8,7 @@ Daily and cumulative stats for each type of vaccine in [`CSV`](data/tw_covid19_v
 
 We use the common vaccines names used by Taiwanese in the data headers for these 5 vaccines:
 1. AZ: Oxford/AstraZeneca
-2. BNT: Pfizer-BioNTech
+2. BNT: Pfizer-BioNTech 🤔
 3. 莫德納: Moderna
 4. 高端: Medigen (MVC-COV1901)
 5. 聯亞: Vaxxinity/UBI (UBI-612)
@@ -31,6 +31,6 @@ Source: [Daily, weekly, and adverse event reports](https://www.cdc.gov.tw/Catego
 
 
 
-## Discuss
+## Feedback
 
 Drop by the #vaccine channel on [g0v's Slack](https://join.g0v.tw/).
