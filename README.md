@@ -2,14 +2,14 @@
  
 We are making TW CDC's vaccination data ***completely accessible*** and ***easy to use***, as CDC currenlty only published [daily/weekly reports](https://www.cdc.gov.tw/Category/Page/9jFXNbCe-sFK9EImRRi2Og) as PDFs. 
  
-## Daily stats by vaccine type in [`data`](data)
+## Stats by vaccine type, updated daily
 
-Daily and cumulative stats for each type of vaccine in [`CSV`](data/tw_covid19_vaccinations_by_vaccine_type.csv) and [`JSON`](tw_covid19_vaccinations_by_vaccine_type.json), including stats for each vaccine's 1st vs. 2nd shots. 
+Daily and cumulative stats for each type of vaccine in [`CSV`](data/tw_covid19_vaccinations_by_vaccine_type.csv) and [`JSON`](tw_covid19_vaccinations_by_vaccine_type.json), including each vaccine's 1st vs. 2nd shots. 
 
 We use the common vaccines names used by Taiwanese in the data headers for these 5 vaccines:
 1. AZ: Oxford/AstraZeneca
 2. BNT: Pfizer-BioNTech
-3. Moderna
+3. 莫德納: Moderna
 4. 高端: Medigen (MVC-COV1901)
 5. 聯亞: Vaxxinity/UBI (UBI-612)
 
