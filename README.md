@@ -1,6 +1,6 @@
 # Open Data of Taiwan's COVID-19 Vaccination Stats
  
-We are making TW CDC's vaccination data ***completely accessible*** and ***easy to use***, as it is currenlty only published as [daily/weekly PDF reports](https://www.cdc.gov.tw/Category/Page/9jFXNbCe-sFK9EImRRi2Og) by CDC. 
+We are making TW CDC's vaccination data ***completely accessible*** and ***easy to use***, as CDC currenlty only published [daily/weekly reports](https://www.cdc.gov.tw/Category/Page/9jFXNbCe-sFK9EImRRi2Og) as PDFs. 
  
 ## Daily stats by vaccine type in [`data`](data)
 
