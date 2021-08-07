@@ -6,9 +6,10 @@ from os import path
 CDC_BASE_URL = "https://www.cdc.gov.tw"
 REPORTS_URL = "https://www.cdc.gov.tw/Category/Page/9jFXNbCe-sFK9EImRRi2Og"
 
-WEEKLY_DIR = "data/pdf/weekly/"
-DAILY_DIR = "data/pdf/daily/"
-ADVERSE_DIR = "data/pdf/adverse_events/"
+VACCINATION_REPORTS_DIR = "data/tw.gov.cdc.vaccination_reports/"
+WEEKLY_DIR = VACCINATION_REPORTS_DIR + "weekly/"
+DAILY_DIR = VACCINATION_REPORTS_DIR + "daily/"
+ADVERSE_DIR = VACCINATION_REPORTS_DIR + "adverse_events/"
 
 SAVE_VIEWER_HTML = False
 
