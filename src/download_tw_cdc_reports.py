@@ -27,7 +27,7 @@ def is_weekly(name: str):
 
 
 def is_adverse_event(name: str):
-    return name.endswith("疫苗接種後不良反應事件通報.pdf")
+    return name.endswith("疫苗接種後不良反應事件通報.pdf") or name.endswith("疫苗接種後不良事件通報.pdf")
 
 
 def download_cdc_reports():
