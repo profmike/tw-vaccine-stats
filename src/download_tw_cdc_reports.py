@@ -9,7 +9,7 @@ REPORTS_URL = "https://www.cdc.gov.tw/Category/Page/9jFXNbCe-sFK9EImRRi2Og"
 VACCINATION_REPORTS_DIR = "data/tw.gov.cdc.vaccination_reports/"
 WEEKLY_DIR = VACCINATION_REPORTS_DIR + "weekly/"
 DAILY_DIR = VACCINATION_REPORTS_DIR + "daily/"
-BREAKTHROUGH_DIR = VACCINATION_REPORTS_DIR + "breakthrough_infection/"
+BREAKTHROUGH_DIR = VACCINATION_REPORTS_DIR + "breakthrough_infections/"
 ADVERSE_DIR = VACCINATION_REPORTS_DIR + "adverse_events/"
 
 SAVE_VIEWER_HTML = False
