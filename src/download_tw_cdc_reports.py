@@ -38,7 +38,7 @@ def download_cdc_reports():
         reports_page.content, "html.parser", from_encoding="utf-8").select("div.download a")
 
     for link in links:
-        file_name = link.get_text()
+        file_name = link.get_text().replace(".pdf.pdf", ".pdf")
         if is_daily(file_name):
             file_path = DAILY_DIR + file_name
         elif is_weekly(file_name):
