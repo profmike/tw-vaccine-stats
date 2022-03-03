@@ -23,7 +23,8 @@ def is_daily(name: str):
     return name.endswith("疫苗接種統計資料.pdf") or name.endswith("疫苗日報表.pdf")
 
 def is_weekly(name: str):
-    return name.endswith("疫苗接種對象累計接種人次.pdf") or name.endswith("累計接種劑數與各縣市COVID-19疫苗接種率.pdf") or name.endswith("累計接種人次與各縣市COVID-19疫苗接種率.pdf")
+    # "疫苗接種對象累計接種人次.pdf" "累計接種劑數與各縣市COVID-19疫苗接種率.pdf" "累計接種人次與各縣市COVID-19疫苗接種率.pdf" "累計接種人次與各縣市 COVID-19 疫苗接種率.pdf"
+    return "疫苗" in name and "累計" in name and name.endswith(".pdf") 
 
 def is_breakthrough_infection(name: str):
     return name.startswith("Breakthrough")
